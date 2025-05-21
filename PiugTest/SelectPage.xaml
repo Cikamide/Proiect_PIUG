@@ -1,0 +1,200 @@
+﻿<Page
+    x:Class="PiugTest.SelectPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PiugTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#02042F">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+
+        <!-- Buton Logout -->
+        <Button x:Name="LogoutButton"
+        Content="Logout"
+        Click="LogoutButton_Click"
+        Background="#E53935"
+        Foreground="White"
+        Width="90"
+        Height="35"
+        Margin="20,10,0,0"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        BorderThickness="0"
+        CornerRadius="8"/>
+
+      
+
+
+        <!-- Header cu logo și text -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="4" Margin="0,10,0,0">
+            <Button x:Name="SwitchBackgroundButton"
+                Content="🌗"
+                Width="50"
+                Height="50"
+                FontSize="20"
+                Background="#444"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,10,10,0"
+                Click="SwitchBackgroundButton_Click"
+                BorderThickness="0"
+                CornerRadius="25"/>
+            
+            <Button x:Name="ChangeTextColorButton"
+                Content="🎨"
+                Click="ChangeTextColorButton_Click"
+                Width="50"
+                Height="50"
+                FontSize="20"
+                Background="#444"
+                Foreground="White"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,10,70,0"
+                BorderThickness="0"
+                CornerRadius="25"/>     
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Spacing="20" VerticalAlignment="Center">
+                    <Image Source="Assets/LogoOnly.png"
+                           Width="80"
+                           Height="80"
+                           Stretch="Uniform" />
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="PixelForge"
+                                   Foreground="White"
+                                   FontSize="30"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Left" />
+                        <TextBlock Text="BUILT FOR PERFORMANCE. MADE FOR YOU."
+                                   Foreground="#38BDF8"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Left" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <!-- Titlu central -->
+        <TextBlock
+            Text="Choose"
+            Foreground="White"
+            FontSize="24"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            Grid.ColumnSpan="4"
+            Grid.Row="1"
+            Margin="0,20,0,0" />
+
+        <!-- Card: Preview PC Builds -->
+        <Border Grid.Column="0" Grid.Row="2" Margin="20,50,20,0" Padding="20" Background="#1A1A2E" CornerRadius="12" Height="600">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Preview PC Builds"
+                    Foreground="White"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    HorizontalAlignment="Center" />
+                <Button
+    Content="Preview"
+    Foreground="White"
+    Background="#4CAF50"
+    Width="135"
+    Height="45"
+    CornerRadius="22.5"
+    Margin="0,20,0,10"
+    Click="PreviewButton_Click"
+    BorderThickness="0"
+    HorizontalAlignment="Center"/>
+                <TextBlock
+                    Text="Explorează opțiunea „Build Your Own PC” și creează sistemul perfect pentru tine! Alege fiecare componentă în funcție de bugetul și nevoile tale, de la procesoare și plăci video, până la carcasă și sistem de răcire. Libertatea e a ta – configurează un PC unic, exact așa cum ți-l dorești!"
+                    Foreground="White"
+                    FontSize="14"
+                    TextWrapping="Wrap"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0"
+                    Opacity="0.9"/>
+                <Border CornerRadius="12"
+                        Width="350"
+                        Height="350"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    <Image Source="Assets/PreviewPNG.png"
+                           Stretch="UniformToFill"
+                           Width="350"
+                           Height="350"/>
+                    
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <!-- Card: Build Your Own PC -->
+        <Border Grid.Column="3" Grid.Row="2" Margin="20,50,20,0" Padding="20" Background="#1A1A2E" CornerRadius="12" Height="600">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Build Your Own PC"
+                    Foreground="White"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    HorizontalAlignment="Center" />
+                <Button
+    Content="Build"
+    Foreground="White"
+    Background="#00B0FF"
+    Width="135"
+    Height="45"
+    CornerRadius="22.5"
+    Margin="0,20,0,10"
+    Click="BuildButton_Click"
+    BorderThickness="0"
+    HorizontalAlignment="Center"/>
+                <TextBlock
+                    Text="Construiește-ți propriul PC exact așa cum vrei! Alege fiecare componentă în funcție de performanțele dorite și bugetul disponibil, fie că ești gamer, creator de conținut sau pasionat de tehnologie. Personalizează totul, de la procesor până la iluminarea carcasei, și bucură-te de un sistem unic, creat special pentru tine."
+                    Foreground="White"
+                    FontSize="14"
+                    TextWrapping="Wrap"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0"
+                    Opacity="0.9"/>
+                <Border CornerRadius="12"
+                        Width="350"
+                        Height="350"
+                        Margin="0,10,0,0"
+                        HorizontalAlignment="Center">
+                    <Image Source="Assets/BuildPNG.png"
+                           Stretch="UniformToFill"
+                           Width="350"
+                           Height="350"/>
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <!-- Spațiu liber în partea de jos -->
+        <Grid Grid.Row="3" Grid.ColumnSpan="4" VerticalAlignment="Bottom" Margin="0,0,0,10">
+            <TextBlock
+                Text="© 2025 PixelForge. All rights reserved."
+                Foreground="White"
+                FontSize="12"
+                HorizontalAlignment="Center"
+                Opacity="0.6"/>
+        </Grid>
+    </Grid>
+</Page>

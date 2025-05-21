@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PiugTest (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PiugTest (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
